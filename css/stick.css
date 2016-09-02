@@ -1,0 +1,59 @@
+#viewport 
+{
+	width:550px;
+	height:300px;
+	border:1px solid black;
+	margin:auto auto;
+	box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+#theStickFigure
+{
+	width:55px;
+	height:111px;
+	position:absolute;
+}
+.dpadSprite
+{
+	width:;
+}
+
+
+
+
+@media screen and (orientation:portrait) {
+    .warning
+    {
+    	display:block;
+    	width:100px;
+    	height:!00px;
+    	font-size:28px;
+    	color:red;
+    }
+    #viewport
+    {
+    	display:none;
+    }
+    .bpad-container
+    {
+    	display:none;
+    }
+}
+
+@media screen and (orientation:landscape) {
+	.warning
+	{
+		display:none;
+	}
+	#viewport
+	{
+		display:block;
+	}
+	.bpad-container
+	{
+		display:block;
+	}
+    // CSS applied when the device is in landscape mode
+}
