@@ -7,7 +7,7 @@
 </head>
 
 
-<div class='warning'>This is the warning</div>
+<div class='warning'>Please rotate to landscape to display properly</div>
 <div id='viewport'></div>
 <div class='bpad-container'>
 	<img src='img/dpadclear.png' class='dpadSprite'/>
