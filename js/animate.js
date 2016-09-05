@@ -7,40 +7,44 @@ var Animate = function(){
 		var outerWidth = $(element.sprite).outerWidth();
 		var bottomY = el.y + outerHeight;
 		console.log(x);
-		if (el.y + outerHeight >= 309 || el.y <= -10 || el.x <= -7 || el.x  + outerWidth >= 555 )
+		if (el.y + outerHeight >= 300)
 		{
-			return false;
+			return 'down';
 		}
-		else
+		else if( el.y <= -10 )
 		{
-			return true;
+			return 'up';
+		}
+		else if( el.x <= -6 )
+		{
+			return 'left';
+		}
+		else if( el.x  + outerWidth >= 555 )
+		{
+			return 'right';
 		}
 	};	
 	this.figure = function(){
 		console.log(bpad.isDown('up'));
-		if(bpad.isDown('up') === 0)
+		if(bpad.isDown('up') === 0 && this.borderCheck(stickFigure) !== 'up')
 		{
 			stickFigure.y -= 2;
+			stickFigure.draw();
 		}
-		if(bpad.isDown('down') === 0)
+		if(bpad.isDown('down') === 0 && this.borderCheck(stickFigure) !== 'down')
 		{
 			stickFigure.y += 2;
+			stickFigure.draw();
 		}
-		if(bpad.isDown('left') === 0)
+		if(bpad.isDown('left') === 0 && this.borderCheck(stickFigure) !== 'left')
 		{
 			stickFigure.x -= 2;
+			stickFigure.draw();
 		}
-		if(bpad.isDown('right') === 0)
+		if(bpad.isDown('right') === 0 && this.borderCheck(stickFigure) !== 'right')
 		{
 			stickFigure.x += 2;
-		}
-		if(this.borderCheck(stickFigure))
-		{
-		stickFigure.draw();
-		}
-		else
-		{
-			console.log('you have gone outside the border!!');
+			stickFigure.draw();
 		}
 	};
 	this.animLoop = function(){

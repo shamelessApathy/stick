@@ -22,7 +22,18 @@
 }
 
 
-
+.fullscreen-button
+{
+	width:100px
+	height:auto;
+	background:blue;
+	color:white;
+	font-size:20px;
+	text-align:center;
+	position:fixed;
+	bottom:0;
+	left:300px;
+}
 
 @media screen and (orientation:portrait) {
     .warning

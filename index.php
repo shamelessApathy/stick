@@ -11,11 +11,13 @@
 <div id='viewport'></div>
 <div class='bpad-container'>
 	<img src='img/dpadclear.png' class='dpadSprite'/>
+	<div class='prevent'></div>
 	<div class='bpad-direction' id='bpad-left'></div>
 	<div class='bpad-direction' id='bpad-up'></div>
 	<div class='bpad-direction' id='bpad-right'></div>
 	<div class='bpad-direction' id='bpad-down'></div>
 </div>
+<div class='fullscreen-button'>Click for full screen</div>
 <script src='js/globals.js'></script>
 <script src='js/bpad.js'></script>
 <script src='js/element.js'></script>

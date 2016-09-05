@@ -1,10 +1,21 @@
+
 var windowAnimFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.onRequestAnimationFrame || window.msRequestAnimationFrame || null;
 var allElementsInView = [];
 var bpad = new Bpad();
-var stickFigure = new Element(50,50, 'img/stick_figure.png', 'theStickFigure', 'sprite');
+var stickFigure = new Element(0,0, 'img/stick_figure.png', 'theStickFigure', 'sprite');
 var animate = new Animate();
+var viewport = document.documentElement;
+var fullScreen = function(element)   {
+  if(viewport.requestFullScreen) {
+    viewport.requestFullScreen();
+  } else if(viewport.webkitRequestFullScreen ) {
+    viewport.webkitRequestFullScreen();
+  } else if(viewport.mozRequestFullScreen) {
+    viewport.mozRequestFullScreen();
+  }
+};
 jQuery(function(){
-
+jQuery('.fullscreen-button').on('click', fullScreen);
 var Game = function(){
 	this.initialize = function(){
 		container = jQuery('#viewport');
