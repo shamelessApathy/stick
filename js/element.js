@@ -17,7 +17,6 @@ var Element = function(x, y, imagePath, id , className)
 	};
 	this.initialize();
 	this.draw = function(){
-		console.log('element draw function firing');
 		this.sprite.css({
 			'top' : this.y,
 			'left': this.x

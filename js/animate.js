@@ -6,7 +6,7 @@ var Animate = function(){
 		var outerHeight = $(element.sprite).outerHeight();
 		var outerWidth = $(element.sprite).outerWidth();
 		var bottomY = el.y + outerHeight;
-		console.log(x);
+		
 		if (el.y + outerHeight >= 300)
 		{
 			return 'down';
@@ -25,7 +25,7 @@ var Animate = function(){
 		}
 	};	
 	this.figure = function(){
-		console.log(bpad.isDown('up'));
+	
 		if(bpad.isDown('up') === 0 && this.borderCheck(stickFigure) !== 'up')
 		{
 			stickFigure.y -= 2;
@@ -51,6 +51,6 @@ var Animate = function(){
 		this.figure();
 	}.bind(this);
 	var int = setInterval(function(){
-	//console.log(this.bpad.isDown('up'));
+
 	}, 1000);
 }
