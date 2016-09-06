@@ -1,3 +1,8 @@
+/* -webkit-user-select: none; iOS workaround for the problem with the hold to copy function on long touch */
+html
+{
+	-webkit-user-select: none;
+}
 .dpadSprite
 {
 	max-width:100%;
