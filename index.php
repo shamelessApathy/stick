@@ -8,7 +8,7 @@
 
 
 <div class='warning'>Please rotate to landscape to display properly</div>
-<div id='viewport'></div>
+<canvas width='550' height='300'></canvas>
 <div class='bpad-container'>
 	<img src='img/dpadclear.png' class='dpadSprite'/>
 	<div class='prevent'></div>
@@ -19,6 +19,7 @@
 </div>
 <div class='fullscreen-button'>Click for full screen</div>
 <script src='js/globals.js'></script>
+<script src='js/spritesheet.js'></script>
 <script src='js/bpad.js'></script>
 <script src='js/element.js'></script>
 <script src='js/animate.js'></script>

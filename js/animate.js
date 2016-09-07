@@ -90,14 +90,19 @@ var Animate = function(){
 			stickFigure.draw();
 		}
 		if(bpad.isDown('down') === 0 && this.borderCheck(stickFigure).indexOf('down') === -1)
-		{
-			stickFigure.y += 2;
-			stickFigure.draw();
+		{	
+			var y = stickFigure.y;
+			y = y + 2;
+			ctx.clearRect(0, 0, 150, 150); 
+   			spritesheet.update(); 
+   			spritesheet.draw(0, 0);
+			
 		}
 		if(bpad.isDown('left') === 0 && this.borderCheck(stickFigure).indexOf('left') === -1)
 		{
 			stickFigure.x -= 2;
 			stickFigure.draw();
+
 		}
 		if(bpad.isDown('right') === 0 && this.borderCheck(stickFigure).indexOf('right') === -1)
 		{
@@ -112,3 +117,7 @@ var Animate = function(){
 
 	}, 1000);
 }
+
+
+//69w x 96h
+
